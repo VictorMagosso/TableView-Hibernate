@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "usuarios")
 public class Usuario {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -51,5 +52,16 @@ public class Usuario {
 
     public void setRg(int rg) {
         this.rg = rg;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", rg=" + rg +
+                ", data='" + data + '\'' +
+                ", user='" + user + '\'' +
+                '}';
     }
 }
